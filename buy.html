@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+    ></script>
+    <link rel="stylesheet" href="buy.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script defer src="buy.js"></script>
+
+   
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script> -->
+    
+
+    <title>Buy Homes</title>
+</head>
+
+<body id="body">
+
+    <div class="container">
+        <!-- Navbar -->
+       
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <!-- Container wrapper -->
+                    <div class="container-fluid">
+                    <!-- Toggle button -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <i class="fas fa-bars"></i>
+                    </button>
+                
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img
+                            src="./imgs/Reality Rise.png"
+                            height="25"
+                            alt="MDB Logo"
+                            loading="lazy"
+                        />
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#subscribe">Subscribe</a>
+                        </li>
+                        </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+                
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center">
+                        <!-- Icon -->
+                        <a class="link-secondary me-3" href="#">
+                        <!-- <i class="fas fa-shopping-cart"></i> -->
+                        </a>
+                
+                        <!-- Notifications -->
+                        <!-- <div class="dropdown">
+                        <a
+                            class="link-secondary me-3 dropdown-toggle hidden-arrow"
+                            href="#"
+                            id="navbarDropdownMenuLink"
+                            role="button"
+                            data-mdb-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <i class="fas fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul
+                            class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="navbarDropdownMenuLink"
+                        >
+                            <li>
+                            <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                        </div> -->
+                        <!-- Avatar -->
+                        <div class="dropdown">
+                        <a
+                            class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                            href="#"
+                            id="navbarDropdownMenuAvatar"
+                            role="button"
+                            data-mdb-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <img
+                            src="./imgs/user_logo.png"
+                            class="rounded-circle"
+                            height="25"
+                            alt="Black and White Portrait of a Man"
+                            loading="lazy"
+                            />
+                        </a>
+                        <ul
+                            class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="navbarDropdownMenuAvatar"
+                        >
+                            <li>
+                            <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                    <!-- Right elements -->
+                    </div>
+                    <!-- Container wrapper -->
+                </nav>
+ 
+  <!-- Navbar -->
+
+    </div>
+
+    <div class="separator"></div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-mdb-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./imgs/Slide 1.png" class="d-block w-100" alt="Wild Landscape" style="max-height: 78vh;"/>
+          </div>
+          <div class="carousel-item">
+            <img src="./imgs/Slide 2.png" class="d-block w-100" alt="Camera" style="max-height: 78vh;"/>
+          </div>
+          <div class="carousel-item">
+            <img src="./imgs/Slide 3.png" class="d-block w-100" alt="Exotic Fruits" style="max-height: 78vh;"/>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+      <div style="height: auto; width: 100%; display: flex; justify-content: center; padding-top: 30px; align-items: center; flex-direction: column;" >
+        <h1 class="mb-3 h1 center">REALTY RISE</h1>
+        <p class="ghi"></p>
+      </div>
+
+      <div class="display-cities">
+
+        <!-- <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img src="https://mdbootstrap.com/img/new/standard/nature/111.webp" class="img-fluid" />
+            <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+            </a>
+            </div>
+            <div class="card-header">Featured</div>
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+        
+            </div>
+        </div> -->
+
+
+
+
+
+
+      </div>
+
+      <!-- Remove the container if you want to extend the Footer to full width. -->
+    
+
+    <div class="features_container">
+
+      <h1 style="width: 100%; text-align: center; color: #fff; letter-spacing: 5px;">FEATURES</h1>
+      <div style="width: 100%; display: flex; justify-content: center; padding: 15px 0;"> <p class="ghi"></p> </div>
+   
+      
+
+      <div class="features_card">
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px 20px 30px 20px;">
+
+        <img src="data:image/png;base64,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" alt="No Image ">
+
+      </div>
+
+        <h4 style="text-align: center; padding: 10px 5px;">Avoid Brokers</h4>
+        <p style="text-align: center;">We directly connect you to verified owners to save brokerage.</p>
+
+      </div>
+
+      <div class="features_card">
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px 20px 30px 20px;">
+
+        <img src="data:image/png;base64,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" alt="No Image ">
+
+      </div>
+
+        <h4 style="text-align: center; padding: 10px 5px;">Rental Agreement</h4>
+        <p style="text-align: center;">Assistance in creating Rental Agreement and Paperwork.</p>
+
+      </div>
+
+      <div class="features_card">
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px 20px 30px 20px;">
+
+        <img src="data:image/png;base64,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" alt="No Image ">
+
+      </div>
+
+        <h4 style="text-align: center; padding: 10px 5px;">Shortlist Without Visiting</h4>
+        <p style="text-align: center;">Extensive Information Makes it Easy to choose  what you want.</p>
+
+      </div>
+
+      
+    </div>
+
+    <div class="about_container">
+
+      <div class="about-sections">
+
+      <h2 style="text-align: center; letter-spacing: 3px; margin-top: 20px;">ABOUT US</h2>
+
+      <p style="text-align: center; margin-top: 10px; padding: 2% 2%;">Your one-stop destination for buying and renting properties. A platform that connects buyers and sellers to make real estate transactions seamless and stress-free.
+      </p>
+      <p class="list-group-item list-group-item-action list-group-item-secondary " style="text-align: center; margin-top: 10px; padding: 1% 2%; border-radius: 5px;"> An extensive collection of properties, ranging from apartments to villas, to cater to all your real estate needs.</p>
+
+      <p class="list-group-item list-group-item-action list-group-item-secondary " style="text-align: center; margin-top: 10px; padding: 1% 2%; border-radius: 5px;"> We strive to make the process as smooth as possible.</p>
+
+      <p class="list-group-item list-group-item-action list-group-item-secondary " style="text-align: center; margin-top: 10px; padding: 1% 2%; border-radius: 5px;">  We value transparency, integrity, and excellent customer service. </p>
+
+      </div>
+
+      <div class="div-sections div-sections-image">
+
+        <h3 style="color: #fff; text-align: center; margin-top: 20px; background-color: #000000; padding: 7px; letter-spacing: 3px;">QUALITY IS OUR ASSURANCE</h3>
+
+        
+
+        
+        
+      </input>
+
+        
+      </div>
+    
+    </div>
+
+    <div id="subscribe" class="newsletter_background">
+
+      <form class="newsletter" onsubmit="newslettersubmit()">
+
+        <h3 style="text-align: center; color: #fff; letter-spacing: 5px; margin: 15px 0;">SUBSCRIBE</h3>
+        <div style="width: 100%; display: flex; justify-content: center; padding: 1px 0;"> <p class="ghi"></p> </div>
+
+          <input class='subscription_name' placeholder="Name" type="text" required>
+          <input class='subscription_email' placeholder="E-mail" type="email" required>
+          
+          <input type="submit" name="submit" value="SUBMIT" class="newsletter_submit_btn" >
+
+
+
+      </form>
+
+
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+   
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #1c2331"
+            >
+      <!-- Section: Social media -->
+      <section
+               class="d-flex justify-content-between p-4"
+               style="background-color: #ce5151"
+               >
+        <!-- Left -->
+        <div class="me-5">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+  
+        <!-- Right -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+          <a href="" class="text-white me-5">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-5">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-5">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-5">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-5">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-5">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Links  -->
+      <section style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+        <div class="container text-center text-md-start mt-5" style="width: 99vw;">
+          <!-- Grid row -->
+          <div class="row mt-3" style="width: 100%;">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold">Realty Rise</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                Take your real estate journey to new heights with RealityRise.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Products</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="#!" class="text-white">MDBootstrap</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">MDWordPress</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">BrandFlow</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Bootstrap Angular</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Useful links</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="#!" class="text-white">Your Account</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Become an Affiliate</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Shipping Rates</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p><i class="fas fa-home mr-3"></i> Mumbai-400xxx, India</p>
+              <p><i class="fas fa-envelope mr-3"></i> pranav07@somaiya.edu </p>
+              <p><i class="fas fa-phone mr-3"></i> +91 9845698740</p>
+              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © Copyright 2022-2023 :
+        <a class="text-white" href="#"
+           >Pranav's Website</a
+          >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  
+  
+  <!-- End of .container -->
+
+  <span class="subscribed_msg" >Thanks For Subscribing !</span>
+</body>
+
+</html>
